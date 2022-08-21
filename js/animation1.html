@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=.box, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{width: 200px; height:200px; background: red; animation-name: ss; animation-duration: 3s;
+        animation-iteration-count: infinite; animation-timing-function: linear;}
+        @keyframes ss{
+            100%{transform:rotate(360deg);}
+        }
+        .box1{width:100px; height:100px; background-color: red; border:1px solid #000; position:relative; animation-name: mm;
+        animation-duration: 5s; animation-iteration-count: 3; animation-fill-mode: forwards; 
+        animation-delay: 2s;
+        animation: mm 2s 2s infinite;
+         /* animation: name duration timing-function delay iteration-count direction fill-mode  
+         shorthand property for animation*/}
+        @keyframes mm{
+        0%{left:0%; background-color: pink;}
+        100%{left:500px;}
+        }
+        .a{animation-timing-function: linear;}
+        .b{animation-timing-function: ease;}
+        .c{animation-timing-function: ease-in;}
+        .d{animation-timing-function: ease-out;}
+        .e{animation-timing-function: ease-in-out;}
+        .f{animation-timing-function: steps(5,end);}
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box1 a">A</div>
+    <div class="box1 b">B</div>
+    <div class="box1 c">C</div>
+    <div class="box1 d">D</div>
+    <div class="box1 e">E</div>
+    <div class="box1 f">F</div>
+</body>
+</html>
